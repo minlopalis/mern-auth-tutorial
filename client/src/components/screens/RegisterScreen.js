@@ -48,14 +48,13 @@ const RegisterScreen = () => {
         config
       );
 
-      console.log(data.token)
+      console.log(data.token);
       localStorage.setItem("authToken", data.token);
 
       navigate("/");
     } catch (error) {
-      console.log(error.response)
+      console.log(error.response);
       setError(error.response);
-      // setError(error.response.data.error);
 
       setTimeout(() => {
         setError("");
